@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+} 
+
 body{
     padding: 0px;
     margin: 0px;
@@ -7,18 +11,21 @@ body{
 .head-container{
     background-color: #ffcc00;
     display: grid;
+    height: 50vw;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 380px 380px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "logo play-button"
     "now-playing play-button";
-    /* justify-items: stretch;
-    align-items: stretch; */
 }
 
 .head-container .logo{
     grid-area: logo;
     padding: 20px;
+}
+
+.head-container .logo img{
+    width: 15vw;
 }
 
 .head-container .now-playing{
@@ -36,12 +43,13 @@ body{
 
 .head-container .play-button{
     grid-area: play-button;
-}
-
-.head-container .play-button img{
     min-width: 0%;
     max-width: 100%;
     max-height: 100%;
+}
+
+.head-container .play-button img{
+    height: 50vw;
 }
 
 .head-container .now-playing .text-nowplaying{
@@ -58,13 +66,19 @@ body{
     min-width: 0%;
     max-width: 100%;
     max-height: 100%;
+    width: 100%;
+}
+
+.row2 img{
+    width: 100%;
 }
 
 .row3{
     background-color: #ffcc00;
     display: grid;
+    height: 100vw;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 300px 450px 450px;
+    grid-template-rows: 3fr 1fr 1fr;
     grid-template-areas:
     "howto pallino"
     "howto lista"
@@ -73,25 +87,376 @@ body{
 
 .row3 .howto{
     grid-area: howto;
-    background-color: blue;
     font-size: 15vw;
+    padding:30px;
+    z-index: 1;
 }
 
 .row3 .pallino{
     grid-area: pallino;
-    background-color: black;
+}
+
+.row3 .pallino img{
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 40%;
+    position: relative;
+    left: 50%;
 }
 
 .row3 .strano{
     grid-area: strano;
-    background-color: red;
+}
+
+.row3 .strano img{
+    position: relative;
+    width: 60%;
+    bottom: 50%;
+    left: 5%;
+    z-index: 1;
 }
 
 .row3 .lista{
     grid-area: lista;
-    background-color: cyan;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "lista-1"
+    "lista-2"
+    "lista-3"
+    "lista-4"
+    "lista-5"
+    "lista-6"
+    "lista-7"
+    "lista-8"
+    "lista-9"
+    "lista-10"
+    "lista-11";
 }
 
-/* .head-container .now-playing .text-song{
-    
-} */
+.row3 .lista .lista-1{
+    grid-area: lista-1;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-2{
+    grid-area: lista-2;
+    font-size: 1.5vw;
+    border-bottom-style: solid;
+    align-content: center;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-3{
+    grid-area: lista-3;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-4{
+    grid-area: lista-4;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-5{
+    grid-area: lista-5;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-6{
+    grid-area: lista-6;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-7{
+    grid-area: lista-7;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-8{
+    grid-area: lista-8;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-9{
+    grid-area: lista-9;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row3 .lista .lista-10{
+    grid-area: lista-10;
+    font-size: 1.5vw;
+    align-content: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.row4{
+    background-color: #ffcc00;
+    display: grid;
+    height: 60vw;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "lista2 letter_a";
+}
+
+.row4 .lista2{
+    grid-area: lista2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 30fr;
+    grid-template-areas:
+    "lista-1"
+    "lista-2"
+    "lista-3"
+    "lista-4"
+    "lista-5";
+}
+
+.row4 .lista2 .lista-1{
+    grid-area: lista-1;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row4 .lista2 .lista-2{
+    grid-area: lista-2;
+    font-size: 1.5vw;
+    border-bottom-style: solid;
+    align-content: center;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row4 .lista2 .lista-3{
+    grid-area: lista-3;
+    font-size: 1.5vw;
+    border-bottom-style: solid;
+    align-content: center;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row4 .lista2 .lista-4{
+    grid-area: lista-4;
+    font-size: 1.5vw;
+    border-bottom-style: solid;
+    align-content: center;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row4 .lista2 .lista-5{
+    grid-area: lista-5;
+}
+
+.row4 .letter-a{
+    grid-area: letter_a;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.row4 .letter-a img{
+    width: 100%;
+}
+
+.row5{
+    background-color: #ffcc00;
+    display: grid;
+    height: 30vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "lista-1 lista-2"
+    "lista-3 lista-4"
+    "lista-5 lista-6"
+    "lista-7 lista-8";
+}
+
+.row5 .lista-1{
+    grid-area: lista-1;
+    border-bottom-style: solid;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row5 .lista-2{
+    grid-area: lista-2;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-right: 20px;
+}
+
+.row5 .lista-3{
+    grid-area: lista-3;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row5 .lista-4{
+    grid-area: lista-4;
+    font-size: 2vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-right: 20px;
+    text-align: end;
+}
+
+.row5 .lista-5{
+    grid-area: lista-5;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row5 .lista-6{
+    grid-area: lista-6;
+    font-size: 2vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-right: 20px;
+    text-align: end;
+}
+
+.row5 .lista-7{
+    grid-area: lista-7;
+    font-size: 5vw;
+    border-bottom-style: solid;
+    align-content: end;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+.row5 .lista-8{
+    grid-area: lista-8;
+    font-size: 2vw;
+    border-bottom-style: solid;
+    align-content: end;
+    text-align: end;
+    border-width: 1px;
+    margin-right: 20px;
+}
+
+.row6{
+    background-color: #ffcc00;
+    display: grid;
+    height: 50vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "lista-1 lista-2";
+}
+
+.row6 .lista-1{
+    grid-area: lista-1;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.row6 .lista-1 img{
+    width: 90%;
+    padding: 1.5vw 1vw;
+}
+
+.row6 .lista-2{
+    grid-area: lista-2;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.row6 .lista-2 img{
+    width: 90%;
+    padding: 1.5vw 1vw;
+}
+
+.row7{
+    background-color: #ffcc00;
+    height: 10vw;
+}
+
+.row8{
+    background-color: #660099;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.row8 img{
+    width: 100%;
+}
+
+footer{
+    display: grid;
+    height: 50vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "labbra freccia";
+}
+
+footer .labbra{
+    grid-area: labbra;
+    background-color: #660099;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
+}
+
+footer .labbra img{
+    width: 60%;
+}
+
+footer .freccia{
+    grid-area: freccia;
+    background-color: #ff3333;
+    min-width: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
+}
+
+footer .freccia img{
+    width: 60%;
+}
